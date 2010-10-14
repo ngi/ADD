@@ -6,7 +6,6 @@ import hemas.add.dicom.utils.DicomUtils;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionEvent;
 import org.eclipse.swt.events.SelectionListener;
-import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -27,7 +26,7 @@ public class MainGui {
 	
 	Display display; // = new Display();
 	final Shell shell; // = new Shell(display);
-	FilterTree tree;
+	Tree tree;
 	Text txtFile;
 	
 	public MainGui() {
@@ -85,7 +84,8 @@ public class MainGui {
 		clmValue.setText("DICOM Value");
 		clmValue.setWidth(450);
 		
-	    shell.pack();
+	    shell.setSize(960, 600);
+	    //shell.pack();
 		shell.open();
 		
 		while (!shell.isDisposed()) {
@@ -104,7 +104,7 @@ public class MainGui {
 		public void widgetSelected(SelectionEvent arg0) {
 			FileDialog fd = new FileDialog(shell, SWT.OPEN);
 			fd.setText("Open");
-			fd.setFilterPath("/Users/ngi/Documents/workspace/add");
+			fd.setFilterPath("dcm");
 			String[] filterExt = { "*.dcm", "*.dicom", "*.*" };
 			fd.setFilterExtensions(filterExt);
 			String selected = fd.open();

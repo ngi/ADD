@@ -6,6 +6,11 @@ import java.io.IOException;
 import org.dcm4che2.data.DicomObject;
 import org.dcm4che2.io.DicomInputStream;
 
+/**
+ * @author Angelo Alfano
+ * @since 0.1
+ *
+ */ 
 public class DicomOpener {
 
 	private DicomObject dcmObj = null;
