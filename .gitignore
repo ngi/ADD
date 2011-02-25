@@ -1,0 +1,4 @@
+.project
+dcm/**/*
+target/**/*
+*.class
