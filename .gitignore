@@ -1,4 +1,7 @@
 .project
+dcm/
 dcm/**/*
-target/**/*
 *.class
+.classpath
+.project
+.settings/
